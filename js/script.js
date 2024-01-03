@@ -3,3 +3,4 @@ $(document).ready(function() {
     $('#currentDay').text(currentDate); // Sets the text of the element with id 'currentDay' to the current date
   });
   
+  

@@ -70,3 +70,37 @@ header {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.time-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.hour {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.event-input {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.saveBtn {
+  padding: 5px 10px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.hour {
+  width: 50px; /* Adjust as needed */
+  text-align: right;
+  margin-right: 10px;
+}
