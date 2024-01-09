@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Set the current date
-    var currentDate = dayjs().format('DD, MM, YYYY');
+    var currentDate = dayjs().format('dddd, DD, MM, YYYY');
     $('#currentDay').text(currentDate);
 
     // Load and color-code events
