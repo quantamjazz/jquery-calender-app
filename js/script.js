@@ -75,4 +75,3 @@ $("#clearFieldsBtn").click(function (event) {
   setTimeout(function () {
     $("#notification").removeClass("show");
   }, 3000);
-});
