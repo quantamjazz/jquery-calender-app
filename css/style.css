@@ -116,3 +116,18 @@ header {
 .future {
   background-color: #77dd77; /* A green color for future hours */
 }
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.notification.show {
+  display: block;
+}

@@ -36,3 +36,19 @@ $(document).ready(function() {
         localStorage.clear();
     });
 });
+
+$('.saveBtn').on('click', function() {
+    var eventText = $(this).siblings('.event-input').val();
+    var eventTime = $(this).parent().attr('id');
+    localStorage.setItem(eventTime, eventText);
+
+    // Show notification
+    $('#notification').text("Event added to " + eventTime).addClass('show');
+
+    // Hide notification after 3 seconds
+    setTimeout(function() {
+        $('#notification').removeClass('show');
+    }, 3000);
+});
+
+
