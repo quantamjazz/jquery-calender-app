@@ -3,36 +3,6 @@ $(document).ready(function () {
   var currentDate = dayjs().format("dddd, DD, MM, YYYY");
   $("#currentDay").text(currentDate);
 
-  const timeBlockContainer = $(".container");
-
-  const hours = [
-    "8 AM",
-    "9 AM",
-    "10 AM",
-    "11 AM",
-    "12PM",
-    "1PM",
-    "2PM",
-    "3PM",
-    "4PM",
-    "5PM",
-    "6PM",
-  ];
-
-  hours.forEach((hour) => {
-    const hourFormatted = hour.replace(" ", "");
-    const timeBlockHtml = `
-                <div class="time-block" id="${hourFormatted}">
-                    <span class="hour">${hour}</span>
-                    <textarea class="event-text" id="event-${hourFormatted}" name="event-${hourFormatted}"></textarea>
-                    <button class="saveBtn">Save</button>
-                    <button class="clearFieldsBtn">Clear</button>
-                </div>
-            `;
-    timeBlockContainer.append(timeBlockHtml);
-  });
-});
-
 // Load and color-code hours
 var currentHour = dayjs().hour();
 $(".time-block").each(function () {
