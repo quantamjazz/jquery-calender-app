@@ -22,19 +22,17 @@ $(".time-block").each(function () {
   }
 });
 
-// Save button event listener
+// Clear button function for clearing content and local storage
+$(".clearFieldsBtn").click(function (event) {
+  event.preventDefault();
+  $(".event-text").val("");
+  localStorage.clear();
+});},)
+
 $(".saveBtn").on("click", function () {
   var eventText = $(this).siblings(".event-text").val();
   var eventTime = $(this).parent().attr("id");
   localStorage.setItem(eventTime, eventText);
-});
-
-// Clear button function for clearing content and local storage
-$("#clearFieldsBtn").click(function (event) {
-  event.preventDefault();
-  $(".event-text").val("");
-  localStorage.clear();
-});
 
   // Show notification
   $("#notification")
@@ -45,3 +43,4 @@ $("#clearFieldsBtn").click(function (event) {
   setTimeout(function () {
     $("#notification").removeClass("show");
   }, 3000);
+});
